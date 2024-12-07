@@ -7,15 +7,19 @@
     <body>
       <trans-unit id="sAjHZ3u" resname="link.home.text">
         <source>link.home.text</source>
-        <target>__link.home.text</target>
+        <target>Accueil</target>
       </trans-unit>
       <trans-unit id="9tCGMCk" resname="link.logout.text">
         <source>link.logout.text</source>
-        <target>__link.logout.text</target>
+        <target>Déconnexion</target>
       </trans-unit>
       <trans-unit id="3gbQyQc" resname="link.login.text">
         <source>link.login.text</source>
-        <target>__link.login.text</target>
+        <target>Se connecter</target>
+      </trans-unit>
+      <trans-unit id="3.PZDP_" resname="link.dashboard.my_realms.text">
+        <source>link.dashboard.my_realms.text</source>
+        <target>Mes collections</target>
       </trans-unit>
     </body>
   </file>

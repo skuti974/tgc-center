@@ -12,7 +12,7 @@ readonly class RealmManager
         #[AutowireIterator('tgc_center.realm_tag', defaultIndexMethod: 'code')]
         iterable $realms,
     ) {
-        $this->realms = $realms instanceof \Traversable ? iterator_to_array($realms) : $realms;;
+        $this->realms = $realms instanceof \Traversable ? iterator_to_array($realms) : $realms;
     }
 
     public function realms(): array

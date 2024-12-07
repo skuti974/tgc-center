@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <ul>
+        {% for realm in realms %}
+            <li>
+                <a href="#">{{ realm|trans }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

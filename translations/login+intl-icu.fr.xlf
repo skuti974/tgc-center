@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="fr" target-language="fr" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="VA8bM1y" resname="Log in!">
+        <source>Log in!</source>
+        <target>Connexion !</target>
+      </trans-unit>
+      <trans-unit id="G8BXfl." resname="You are logged in as %username%, &lt;a href=&quot;%link.logout%&quot;&gt;%link.logout.text%&lt;/a&gt;">
+        <source>You are logged in as %username%, &lt;a href="%link.logout%"&gt;%link.logout.text%&lt;/a&gt;</source>
+        <target><![CDATA[Vous êtes authentifié en tant que %username%, <a href="%link.logout%">%link.logout.text%</a>]]></target>
+      </trans-unit>
+      <trans-unit id="JKl2Twv" resname="Logout">
+        <source>Logout</source>
+        <target>Déconnexion</target>
+      </trans-unit>
+      <trans-unit id="lSX_PHJ" resname="Please sign in">
+        <source>Please sign in</source>
+        <target>Merci de vous authentifié</target>
+      </trans-unit>
+      <trans-unit id="JZi_tm0" resname="Email">
+        <source>Email</source>
+        <target>Email</target>
+      </trans-unit>
+      <trans-unit id="GqmFSHc" resname="Password">
+        <source>Password</source>
+        <target>Mot de passe</target>
+      </trans-unit>
+      <trans-unit id="WevL4T_" resname="Remember me">
+        <source>Remember me</source>
+        <target>Se souvenir de moi</target>
+      </trans-unit>
+      <trans-unit id="pNIxNSX" resname="Sign in">
+        <source>Sign in</source>
+        <target>S'authentifié</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

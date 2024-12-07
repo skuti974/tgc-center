@@ -1,6 +1,7 @@
 {% extends 'base.html.twig' %}
+{% trans_default_domain 'login' %}
 
-{% block title %}Log in!{% endblock %}
+{% block title %}{{ 'Log in!'|trans }}{% endblock %}
 
 {% block body %}
     <form method="post">
@@ -10,30 +11,29 @@
 
         {% if app.user %}
             <div class="mb-3">
-                You are logged in as {{ app.user.userIdentifier }}, <a href="{{ path('tgc_logout') }}">Logout</a>
+                {{ 'You are logged in as %username%, <a href="%link.logout%">%link.logout.text%</a>'|trans({
+                    '%username%': app.user.userIdentifier,
+                    '%link.logout': path('tgc_logout'),
+                    '%link.logout.text%': 'Logout'|trans
+                }) }}
             </div>
         {% endif %}
 
-        <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
-        <label for="username">Email</label>
+        <h1 class="h3 mb-3 font-weight-normal">{{ 'Please sign in'|trans }}</h1>
+        <label for="username">{{ 'Email'|trans }}</label>
         <input type="email" value="{{ last_username }}" name="_username" id="username" class="form-control" autocomplete="email" required autofocus>
-        <label for="password">Password</label>
+        <label for="password">{{ 'Password'|trans }}</label>
         <input type="password" name="_password" id="password" class="form-control" autocomplete="current-password" required>
 
         <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
 
-        {#
-            Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
-            See https://symfony.com/doc/current/security/remember_me.html
-
-            <div class="checkbox mb-3">
-                <input type="checkbox" name="_remember_me" id="_remember_me">
-                <label for="_remember_me">Remember me</label>
-            </div>
-        #}
+        <div class="checkbox mb-3">
+            <input type="checkbox" name="_remember_me" id="_remember_me">
+            <label for="_remember_me">{{ 'Remember me'|trans }}</label>
+        </div>
 
         <button class="btn btn-lg btn-primary" type="submit">
-            Sign in
+            {{ 'Sign in'|trans }}
         </button>
     </form>
 {% endblock %}

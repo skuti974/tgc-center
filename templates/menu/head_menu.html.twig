@@ -3,12 +3,17 @@
         <li>
             <a href="{{ path('tgc_home') }}">{{ 'link.home.text'|trans({}, 'navigation') }}</a>
         </li>
+        {% if is_granted('ROLE_USER') %}
         <li>
-            {% if is_granted('ROLE_USER') %}
-            <a href="{{ path('tgc_logout') }}">{{ 'link.logout.text'|trans({}, 'navigation') }}</a>
-            {% else %}
-            <a href="{{ path('tgc_login') }}">{{ 'link.login.text'|trans({}, 'navigation') }}</a>
-            {% endif %}
+            <a href="{{ path('dashboard_realm_list') }}">{{ 'link.dashboard.my_realms.text'|trans({}, 'navigation') }}</a>
         </li>
+        <li>
+            <a href="{{ path('tgc_logout') }}">{{ 'link.logout.text'|trans({}, 'navigation') }}</a>
+        </li>
+        {% else %}
+        <li>
+            <a href="{{ path('tgc_login') }}">{{ 'link.login.text'|trans({}, 'navigation') }}</a>
+        </li>
+        {% endif %}
     </ul>
 </div>

@@ -45,7 +45,7 @@ class RegistrationController extends AbstractController
             // generate a signed url and email it to the user
             $this->emailVerifier->sendEmailConfirmation('tgc_verify_email', $user,
                 (new TemplatedEmail())
-                    ->from(new Address('97craft.web@gmail.com', $this->translator->trans('TGC Center Mail Bot', [], 'app')))
+                    ->from(new Address('97craft.web@gmail.com', $this->translator->trans('TGC Center Mail Bot', [], 'email')))
                     ->to((string) $user->getEmail())
                     ->subject($this->translator->trans('Please Confirm your Email', [], 'email'))
                     ->htmlTemplate('registration/confirmation_email.html.twig')

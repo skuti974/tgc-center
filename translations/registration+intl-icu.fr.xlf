@@ -7,7 +7,7 @@
     <body>
       <trans-unit id="m80cBv0" resname="Your email address has been verified.">
         <source>Your email address has been verified.</source>
-        <target>__Your email address has been verified.</target>
+        <target>Votre adresse mail a été vérifié.</target>
       </trans-unit>
     </body>
   </file>

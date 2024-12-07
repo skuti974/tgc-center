@@ -5,9 +5,9 @@
       <tool tool-id="symfony" tool-name="Symfony"/>
     </header>
     <body>
-      <trans-unit id="1hT6Rch" resname="TGC Center Mail Bot">
-        <source>TGC Center Mail Bot</source>
-        <target>__TGC Center Mail Bot</target>
+      <trans-unit id="yLcCZmC" resname="pokemon">
+        <source>pokemon</source>
+        <target>Pokémon</target>
       </trans-unit>
     </body>
   </file>

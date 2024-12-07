@@ -7,7 +7,11 @@
     <body>
       <trans-unit id="6EclFME" resname="Please Confirm your Email">
         <source>Please Confirm your Email</source>
-        <target>__Please Confirm your Email</target>
+        <target>Merci de confirmer votre adresse mail</target>
+      </trans-unit>
+      <trans-unit id="1hT6Rch" resname="TGC Center Mail Bot">
+        <source>TGC Center Mail Bot</source>
+        <target>TGC Center Mail Bot</target>
       </trans-unit>
     </body>
   </file>
