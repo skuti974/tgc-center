@@ -1,0 +1,14 @@
+<div id="header-menu-container">
+    <ul>
+        <li>
+            <a href="{{ path('tgc_home') }}">{{ 'link.home.text'|trans({}, 'navigation') }}</a>
+        </li>
+        <li>
+            {% if is_granted('ROLE_USER') %}
+            <a href="{{ path('tgc_logout') }}">{{ 'link.logout.text'|trans({}, 'navigation') }}</a>
+            {% else %}
+            <a href="{{ path('tgc_login') }}">{{ 'link.login.text'|trans({}, 'navigation') }}</a>
+            {% endif %}
+        </li>
+    </ul>
+</div>
