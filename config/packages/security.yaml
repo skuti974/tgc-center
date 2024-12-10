@@ -6,7 +6,7 @@ security:
     providers:
         tgc_user_provider:
             entity:
-                class: App\Entity\User
+                class: Tgc\Entity\User
                 property: email
     firewalls:
         dev:

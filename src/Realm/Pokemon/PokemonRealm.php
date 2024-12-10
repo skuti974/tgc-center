@@ -1,8 +1,11 @@
 <?php
 
-namespace App\Realm\Pokemon;
+declare(strict_types=1);
 
-use App\Realm\Common\RealmInterface;
+namespace Tgc\Realm\Pokemon;
+
+use Tgc\Realm\Common\RealmInterface;
+use Tgc\Realm\Pokemon\Controller\PokemonRealmController;
 use Symfony\Component\DependencyInjection\Attribute\AutoconfigureTag;
 use Symfony\Contracts\Translation\TranslatableInterface;
 use Symfony\Contracts\Translation\TranslatorInterface;
@@ -15,6 +18,13 @@ class PokemonRealm implements RealmInterface, TranslatableInterface
     public static function code(): string
     {
         return self::REALM_CODE;
+    }
+
+    public function controllerClasses(): array
+    {
+        return [
+            'realm' => PokemonRealmController::class,
+        ];
     }
 
     public function trans(TranslatorInterface $translator, ?string $locale = null): string

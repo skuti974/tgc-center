@@ -18,12 +18,18 @@ doctrine:
             Doctrine\DBAL\Platforms\PostgreSQLPlatform: identity
         auto_mapping: true
         mappings:
-            App:
+            Tgc:
                 type: attribute
                 is_bundle: false
                 dir: '%kernel.project_dir%/src/Entity'
-                prefix: 'App\Entity'
-                alias: App
+                prefix: 'Tgc\Entity'
+                alias: Tgc
+            TgcPokemon:
+                type: attribute
+                is_bundle: false
+                dir: '%kernel.project_dir%/src/Realm/Pokemon/Entity'
+                prefix: 'Tgc\Realm\Pokemon\Entity'
+                alias: TgcPokemon
         controller_resolver:
             auto_mapping: false
 

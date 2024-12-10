@@ -9,6 +9,14 @@
         <source>pokemon</source>
         <target>Pokémon</target>
       </trans-unit>
+      <trans-unit id=".NeHesP" resname="lorcana">
+        <source>lorcana</source>
+        <target>Lorcana</target>
+      </trans-unit>
+      <trans-unit id="cqIlvTa" resname="magic">
+        <source>magic</source>
+        <target>Magic: The Gathering</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

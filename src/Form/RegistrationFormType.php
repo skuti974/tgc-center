@@ -1,8 +1,10 @@
 <?php
 
-namespace App\Form;
+declare(strict_types=1);
 
-use App\Entity\User;
+namespace Tgc\Form;
+
+use Tgc\Entity\User;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;

@@ -1,8 +1,10 @@
 <?php
 
-namespace App\Security;
+declare(strict_types=1);
 
-use App\Entity\User;
+namespace Tgc\Security;
+
+use Tgc\Entity\User;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bridge\Twig\Mime\TemplatedEmail;
 use Symfony\Component\HttpFoundation\Request;

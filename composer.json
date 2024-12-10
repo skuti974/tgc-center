@@ -11,11 +11,13 @@
         "doctrine/doctrine-bundle": "^2.13",
         "doctrine/doctrine-migrations-bundle": "^3.3",
         "doctrine/orm": "^3.3",
+        "gedmo/doctrine-extensions": "^3.17",
+        "nyholm/psr7": "^1.8",
         "phpdocumentor/reflection-docblock": "^5.6",
         "phpstan/phpdoc-parser": "^2.0",
-        "stof/doctrine-extensions-bundle": "^1.12",
         "symfony/asset": "7.2.*",
         "symfony/asset-mapper": "7.2.*",
+        "symfony/cache": "7.2.*",
         "symfony/console": "7.2.*",
         "symfony/doctrine-messenger": "7.2.*",
         "symfony/dotenv": "7.2.*",
@@ -45,6 +47,7 @@
         "symfony/web-link": "7.2.*",
         "symfony/yaml": "7.2.*",
         "symfonycasts/verify-email-bundle": "^1.17",
+        "tcgdex/sdk": "^2.1",
         "twig/extra-bundle": "^2.12|^3.0",
         "twig/twig": "^2.12|^3.0"
     },
@@ -59,12 +62,12 @@
     },
     "autoload": {
         "psr-4": {
-            "App\\": "src/"
+            "Tgc\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "App\\Tests\\": "tests/"
+            "Tgc\\Tests\\": "tests/"
         }
     },
     "replace": {

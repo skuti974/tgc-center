@@ -4,7 +4,7 @@
     <ul>
         {% for realm in realms %}
             <li>
-                <a href="#">{{ realm|trans }}</a>
+                <a href="{{ path('tgc_dashboard_realm_details', {code: realm.code}) }}">{{ realm|trans }}</a>
             </li>
         {% endfor %}
     </ul>

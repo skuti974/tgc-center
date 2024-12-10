@@ -1,8 +1,10 @@
 <?php
 
-namespace App\Repository;
+declare(strict_types=1);
 
-use App\Entity\User;
+namespace Tgc\Repository;
+
+use Tgc\Entity\User;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Component\Security\Core\Exception\UnsupportedUserException;

@@ -25,5 +25,5 @@ framework:
             Symfony\Component\Notifier\Message\ChatMessage: async
             Symfony\Component\Notifier\Message\SmsMessage: async
 
-            # Route your messages to the transports
-            # 'App\Message\YourMessage': async
+            Tgc\Realm\Pokemon\Message\SynchronizeMessage: async
+            Tgc\Realm\Pokemon\Message\SynchronizeSerieMessage: async

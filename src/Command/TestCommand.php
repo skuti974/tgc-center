@@ -1,8 +1,10 @@
 <?php
 
-namespace App\Command;
+declare(strict_types=1);
 
-use App\Realm\Common\RealmManager;
+namespace Tgc\Command;
+
+use Tgc\Realm\Common\RealmManager;
 use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;

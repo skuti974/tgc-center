@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+{% trans_default_domain 'pokemon' %}
+
+{% block body %}
+    <h1>{{ 'realm.pokemon.title'|trans|title }}</h1>
+
+    <ul>
+        {% for serie in series %}
+            <li>{{ serie.localizedTranslation(app.locale).name }} [{{ serie.code }}]</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
