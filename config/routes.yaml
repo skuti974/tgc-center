@@ -3,3 +3,15 @@ controllers:
         path: ../src/Controller/
         namespace: Tgc\Controller
     type: attribute
+    prefix: /{_locale}
+    requirements:
+        _locale: '%locales_regex%'
+
+controllers_pokemon:
+    resource:
+        path: ../src/Realm/Pokemon/Controller/
+        namespace: Tgc\Realm\Pokemon\Controller
+    type: attribute
+    prefix: /{_locale}
+    requirements:
+        _locale: '%locales_regex%'

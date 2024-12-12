@@ -12,7 +12,7 @@ use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\SymfonyStyle;
 use Symfony\Component\Messenger\Exception\ExceptionInterface;
 use Symfony\Component\Messenger\MessageBusInterface;
-use Tgc\Realm\Pokemon\Message\SynchronizeMessage;
+use Tgc\Realm\Pokemon\Message\SynchronizeSeriesMessage;
 
 #[AsCommand(name: 'tgc:synchronize:pokemon', description: 'Fetch Pokémon data from API and synchronize it with database')]
 class PokemonSynchronizerCommand extends Command
@@ -44,7 +44,7 @@ class PokemonSynchronizerCommand extends Command
 
         foreach ($locales as $locale) {
             $io->info('Request synchronizing Pokemon for locale ' . $locale);
-            $this->bus->dispatch(new SynchronizeMessage($locale));
+            $this->bus->dispatch(new SynchronizeSeriesMessage(locale: $locale));
         }
 
         $io->success('Synchronization requested.');

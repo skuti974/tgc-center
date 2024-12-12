@@ -4,14 +4,16 @@ namespace Tgc\Realm\Pokemon\Handler;
 
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\DependencyInjection\Attribute\AutoconfigureTag;
+use Symfony\Component\Messenger\Exception\ExceptionInterface;
 use Symfony\Component\Messenger\MessageBusInterface;
 use Tgc\Realm\Pokemon\Entity\Serie;
 use Tgc\Realm\Pokemon\Entity\SerieTranslation;
 use Tgc\Realm\Pokemon\Message\SynchronizeSerieMessage;
+use Tgc\Realm\Pokemon\Message\SynchronizeSetsMessage;
 use Tgc\Realm\Pokemon\Repository\SerieRepository;
 
 #[AutoconfigureTag('messenger.message_handler')]
-class SynchronizeSerieHandler
+readonly class SynchronizeSerieHandler
 {
     public function __construct(
         private SerieRepository $repository,
@@ -20,6 +22,9 @@ class SynchronizeSerieHandler
     ) {
     }
 
+    /**
+     * @throws ExceptionInterface
+     */
     public function __invoke(SynchronizeSerieMessage $message): void
     {
         $serie = $this->repository->findOneBy(['code' => $message->code()]);
@@ -40,5 +45,10 @@ class SynchronizeSerieHandler
 
         $this->entityManager->persist($serie);
         $this->entityManager->flush();
+
+        $this->bus->dispatch(new SynchronizeSetsMessage(
+            code: $message->code(),
+            locale: $message->locale(),
+        ));
     }
 }

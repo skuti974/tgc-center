@@ -26,4 +26,16 @@ class SerieRepository extends ServiceEntityRepository
             ->getQuery()
             ->getResult();
     }
+
+    public function findOneByCodeAndLocale(string $code, string $locale): ?Serie
+    {
+        return $this->createQueryBuilder('s')
+            ->innerJoin('s.translations', 't')
+            ->where('s.code = :code')
+            ->andWhere('t.locale = :locale')
+            ->setParameter('code', $code)
+            ->setParameter('locale', $locale)
+            ->getQuery()
+            ->getOneOrNullResult();
+    }
 }

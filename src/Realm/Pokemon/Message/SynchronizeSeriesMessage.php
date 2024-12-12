@@ -2,7 +2,7 @@
 
 namespace Tgc\Realm\Pokemon\Message;
 
-readonly class SynchronizeMessage
+readonly class SynchronizeSeriesMessage
 {
     public function __construct(
         private string $locale,
